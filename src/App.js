@@ -14,9 +14,14 @@ function App() {
           studentsName.map(student => <Students name={student}></Students>)
         }
         <MovieCounter></MovieCounter>
+        {/* <MovieDisplay count={count}></MovieDisplay> */}
       </header>
     </div>
   );
+}
+
+function MovieDisplay(props){
+  return <h3>The number of movies is: {props.count}</h3>
 }
 
 function Students(props){
@@ -38,6 +43,7 @@ function MovieCounter(props){
       <button onClick={add}>Add Movie</button>
       <button onClick={del}>Delete Movie</button>
       <h3>Number of movies: {count}</h3>
+      <MovieDisplay count={count}></MovieDisplay>
     </div>
   )
 }
